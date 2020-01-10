@@ -20,13 +20,16 @@
     </Window.DataContext>
     
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Helpers/Porgs.png" Stretch="UniformToFill" />
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <DockPanel Grid.Column="1">
             <materialDesign:Transitioner SelectedIndex="{Binding CurrentPage}" AutoApplyTransitionOrigins="True">
-                <local:LandingView />
+                <local:LoginView />
                 <local:NewCashDiffView />
                 <local:CustomNoteView />
                 <local:SeachView />
@@ -36,7 +39,7 @@
             <Button Content="Napi Eltérés" Command="{Binding NewCashDiff}"/>
             <Button Content="Egyéni" Command="{Binding NewCustom}"/>
             <Button Content="Keres" Command="{Binding Search}"/>
-            <Button Content="Kilép" Click="Button_Click"/>
         </StackPanel>
+        <Button Content="Kilép" Click="Button_Click" VerticalAlignment="Bottom"/>
     </Grid>
 </Window>

@@ -8,10 +8,21 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0">
             <Label Content="Eltérés:" HorizontalAlignment="Center" Margin="10"/>
             <TextBox Width="200" Margin="10" Text="{Binding CashDiff.Difference}"/>
             <Button Content="Lezár" Margin="10" Command="{Binding CashDiff.Submit}"/>
         </StackPanel>
+        <DataGrid ItemsSource="{Binding CashDiff.DiffModel}" Grid.Row="1" Background="Transparent" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Dátum" Width="*" Binding="{Binding Date}" />
+                <DataGridTextColumn Header="Eltérés" Width="*" Binding="{Binding Difference}" />
+                <DataGridTextColumn Header="Feltöltötte" Width="*" Binding="{Binding PostedBy}" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>
