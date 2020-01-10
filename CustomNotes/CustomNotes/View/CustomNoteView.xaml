@@ -8,6 +8,34 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Label Content="CustomNotes" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Margin="10 0 0 0">
+            <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
+                <Label Content="Cím" Foreground="#FF2196F3" FontWeight="Bold" VerticalAlignment="Bottom" FontSize="16"/>
+                <TextBox Margin="10 0 0 0" Width="200" Foreground="#FF2196F3" FontWeight="Bold" BorderBrush="#FF2196F3"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0 20 0 0">
+                <Label Content="Leírás" Foreground="#FF2196F3" FontWeight="Bold" VerticalAlignment="Bottom" FontSize="16"/>
+                <TextBox Height="350" MaxWidth="300" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" BorderThickness="1" Foreground="#FF2196F3" FontWeight="Bold" BorderBrush="#FF2196F3" FontSize="16"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">
+                <Label Content="Relevancia" Foreground="#FF2196F3" FontWeight="Bold" VerticalAlignment="Bottom" FontSize="16"/>
+                <ComboBox Foreground="#FF2196F3" BorderBrush="#FF2196F3" Margin="10 0 0 0" Background="Transparent" ItemsSource="{Binding Custom.RelevanceList}" SelectedIndex="0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">
+                <Label Content="Címke" Foreground="#FF2196F3" FontWeight="Bold" VerticalAlignment="Bottom" FontSize="16"/>
+                <ComboBox Foreground="#FF2196F3" BorderBrush="#FF2196F3" Margin="10 0 0 0" Background="Transparent" ItemsSource="{Binding Custom.TagList}" SelectedIndex="3"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0 30 0 0">
+                <Label Content="vagy egyéni címke" Foreground="#FF2196F3" FontWeight="Bold" VerticalAlignment="Bottom" FontSize="16"/>
+                <TextBox Foreground="#FF2196F3" FontWeight="Bold" VerticalAlignment="Bottom" FontSize="16" BorderBrush="#FF2196F3"/>
+            </StackPanel>
+            <Button Content="Lezár" Width="100" Height="100" Margin="0 30 0 0"/>
+        </StackPanel>
     </Grid>
 </UserControl>

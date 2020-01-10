@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\WIN7\Desktop\CustomNotes\CustomNotes\CustomNotes\CustomNotes\App.xaml
-7317841632
+8379991121
 
-26-970526757
+31216118689
 221-620765290
-MainWindow.xaml;View\CustomNoteView.xaml;View\LandingView.xaml;View\LoginView.xaml;View\NewCashDiffView.xaml;View\SeachView.xaml;View\ViewCollection.xaml;
+MainWindow.xaml;View\CustomNoteView.xaml;View\LandingView.xaml;View\LoginView.xaml;View\NewCashDiffView.xaml;View\RegisterView.xaml;View\SeachView.xaml;View\ViewCollection.xaml;
 
 True
 

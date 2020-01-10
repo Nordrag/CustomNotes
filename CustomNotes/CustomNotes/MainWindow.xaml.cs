@@ -22,7 +22,7 @@ namespace CustomNotes
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

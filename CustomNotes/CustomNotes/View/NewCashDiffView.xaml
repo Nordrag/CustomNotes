@@ -12,12 +12,27 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0">
-            <Label Content="Eltérés:" HorizontalAlignment="Center" Margin="10"/>
-            <TextBox Width="200" Margin="10" Text="{Binding CashDiff.Difference}"/>
-            <Button Content="Lezár" Margin="10" Command="{Binding CashDiff.Submit}"/>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" >
+            <Label Content="Eltérés:" HorizontalAlignment="Center" Margin="10" Foreground="#FF2196F3"/>
+            <TextBox Width="200" Margin="10" Text="{Binding CashDiff.Difference}" Foreground="#FF2196F3" BorderBrush="#FF2196F3"/>
+            <Button Content="Lezár" Margin="0 0 0 20" Command="{Binding CashDiff.Submit}"/>
         </StackPanel>
-        <DataGrid ItemsSource="{Binding CashDiff.DiffModel}" Grid.Row="1" Background="Transparent" AutoGenerateColumns="False">
+        <DataGrid ItemsSource="{Binding CashDiff.DiffModel}" Grid.Row="1" Background="Transparent"
+                  AutoGenerateColumns="False" VerticalGridLinesBrush="#FF2196F3" 
+                  HorizontalGridLinesBrush="#FF2196F3" Foreground="#FF2196F3"
+                  CanUserAddRows="False" CanUserDeleteRows="False">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="FontSize" Value="16" />
+                    <Setter Property="FontWeight" Value="Bold" />
+                </Style>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Setter Property="FontSize" Value="16" />
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="FontWeight" Value="Bold" />
+                </Style>
+            </DataGrid.Resources>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Dátum" Width="*" Binding="{Binding Date}" />
                 <DataGridTextColumn Header="Eltérés" Width="*" Binding="{Binding Difference}" />

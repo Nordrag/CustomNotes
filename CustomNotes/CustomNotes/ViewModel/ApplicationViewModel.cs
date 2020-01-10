@@ -8,7 +8,7 @@ namespace CustomNotes
     public class ApplicationViewModel : ObservableObject
     {
 		private int mCurrentPage = 0;
-		public static string CurrentUser = "Porg";
+		public static string CurrentUser;
 		public int CurrentPage
 		{
 			get { return mCurrentPage; }
@@ -45,7 +45,7 @@ namespace CustomNotes
 			{
 				if (mNewCashDiff == null)
 				{
-					mNewCashDiff = new RelayCommand(r => ChangeView(1));
+					mNewCashDiff = new RelayCommand(r => ChangeView(2));
 				}
 				return mNewCashDiff;
 			}
@@ -60,7 +60,7 @@ namespace CustomNotes
 			{
 				if (mNewCustom == null)
 				{
-					mNewCustom = new RelayCommand(r => ChangeView(2));
+					mNewCustom = new RelayCommand(r => ChangeView(3));
 				}
 				return mNewCustom;
 			}
@@ -75,14 +75,57 @@ namespace CustomNotes
 			{
 				if (mSearch == null)
 				{
-					mSearch = new RelayCommand(r => ChangeView(3));
+					mSearch = new RelayCommand(r => ChangeView(4));
 				}
 				return mSearch;
 			}
 		}
 
+		private ICommand mLoginCommand;
+
+		public ICommand LoginCommand
+		{
+			get
+			{
+				if (mLoginCommand == null)
+				{
+					mLoginCommand = new RelayCommand(r => LoginMethod());
+				}
+				return mLoginCommand;
+			}
+
+		}
+
+		private void LoginMethod()
+		{
+			if (Services.AccountService.LoginUser(Register.User.Username, Register.User.Password))
+			{
+				SideMenuWidth = 120;
+				ApplicationViewModel.CurrentUser = Register.User.Username;
+				CurrentPage = 5;
+			}
+		}
+
+		private Services Services = new Services();
 		public CashDiffViewModel CashDiff { get; set; } = new CashDiffViewModel();
 		public SearchViewModel SearchViewModel { get; set; } = new SearchViewModel();
+		public RegisterViewModel Register { get; set; } = new RegisterViewModel();
+
+		private CustomViewModel mCustom = new CustomViewModel();
+
+		public CustomViewModel Custom
+		{
+			get => mCustom;
+			set
+			{
+				if (value != mCustom)
+				{
+					mCustom = value;
+					OnPropertyChanged(nameof(Custom));
+				}
+			}
+		}
+
 
 		private void ChangeView(int target)
 		{

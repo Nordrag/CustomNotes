@@ -29,5 +29,16 @@ namespace CustomNotes
 
             return value;
         }
+
+        public ObservableCollection<string> GetTags()
+        {
+            var query = mContext.CustomTag.ToList();
+            ObservableCollection<string> result = new ObservableCollection<string>();
+            foreach (var item in query)
+            {
+                result.Add(item.Tag);
+            }
+            return result;
+        }
     }
 }

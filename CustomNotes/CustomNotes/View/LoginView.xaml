@@ -9,24 +9,28 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Label Content="Név" HorizontalAlignment="Center" Margin="10" Foreground="#FF9C27B0" FontSize="18"/>
-            <TextBox Margin="10" Width="350" Foreground="#FF9C27B0" BorderBrush="#FF9C27B0" Name="NameBox" FontSize="18"/>
-            <Label Content="Jelszó" HorizontalAlignment="Center" Margin="10" Foreground="#FF9C27B0" FontSize="18"/>
-            <PasswordBox Margin="10" Width="350" BorderBrush="#FF9C27B0" Foreground="#FF9C27B0" Name="PasswordBox" FontSize="18"/>
+            <Label Content="Név" HorizontalAlignment="Center" Margin="10" Foreground="#FF2196F3" FontSize="18"/>
+            <TextBox Margin="10" Width="350" Foreground="#FF2196F3" BorderBrush="#FF2196F3" Name="NameBox" FontSize="18" Text="{Binding Register.User.Username}"/>
+            <Label Content="Jelszó" HorizontalAlignment="Center" Margin="10" Foreground="#FF2196F3" FontSize="18"/>
+            <TextBox Margin="10" Width="350" BorderBrush="#FF2196F3" Foreground="#FF2196F3" Name="PasswordBox" FontSize="18" Text="{Binding Register.User.Password}"/>
             <Button
                     Style="{DynamicResource MaterialDesignFloatingActionButton}"
-                    Margin="10" >
+                    Margin="10" Command="{Binding LoginCommand}">
                 <materialDesign:PackIcon Kind="Login" />
             </Button>
         </StackPanel>
-        <Label Content="Regisztráció" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="#FF9C27B0"/>
-        <Button Style="{DynamicResource MaterialDesignFloatingActionButton}"
-                x:Name="LoadPageTwo"
+        <Label Content="Regisztráció" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="#FF2196F3"/>
+        <Button Style="{DynamicResource MaterialDesignFloatingActionButton}"               
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"
                 Margin="20"
                Command="{x:Static materialDesign:Transitioner.MoveNextCommand}">
             <materialDesign:PackIcon Kind="AccountBadge" />
+        </Button>
+        <Button VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10" 
+                Style="{DynamicResource MaterialDesignFloatingActionButton}" 
+                Click="Button_Click">
+            <materialDesign:PackIcon Kind="ExitRun" />
         </Button>
     </Grid>
 </UserControl>

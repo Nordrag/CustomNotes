@@ -72,3 +72,5 @@ C:\Users\WIN7\Desktop\CustomNotes\CustomNotes\CustomNotes\CustomNotes\bin\Debug\
 C:\Users\WIN7\Desktop\CustomNotes\CustomNotes\CustomNotes\CustomNotes\bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_green.dll
 C:\Users\WIN7\Desktop\CustomNotes\CustomNotes\CustomNotes\CustomNotes\bin\Debug\netcoreapp3.1\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Users\WIN7\Desktop\CustomNotes\CustomNotes\CustomNotes\CustomNotes\bin\Debug\netcoreapp3.1\runtimes\win8-arm\native\e_sqlite3.dll
+C:\Users\WIN7\Desktop\CustomNotes\CustomNotes\CustomNotes\CustomNotes\obj\Debug\netcoreapp3.1\View\RegisterView.g.cs
+C:\Users\WIN7\Desktop\CustomNotes\CustomNotes\CustomNotes\CustomNotes\obj\Debug\netcoreapp3.1\View\RegisterView.baml

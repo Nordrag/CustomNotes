@@ -21,18 +21,20 @@
     
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Helpers/Porgs.png" Stretch="UniformToFill" />
+            <ImageBrush ImageSource="darkpaper2.jpg" Stretch="UniformToFill" />
         </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="{Binding SideMenuWidth}" x:Name="SideMenu"/>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <DockPanel Grid.Column="1">
             <materialDesign:Transitioner SelectedIndex="{Binding CurrentPage}" AutoApplyTransitionOrigins="True">
                 <local:LoginView />
+                <local:RegisterView />
                 <local:NewCashDiffView />
                 <local:CustomNoteView />
                 <local:SeachView />
+                <local:LandingView />
             </materialDesign:Transitioner>
         </DockPanel>
         <StackPanel Orientation="Vertical">
