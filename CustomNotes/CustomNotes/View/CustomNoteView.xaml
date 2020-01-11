@@ -35,7 +35,7 @@
                 <Label Content="vagy egyéni címke" Foreground="#FF2196F3" FontWeight="Bold" VerticalAlignment="Bottom" FontSize="16"/>
                 <TextBox Foreground="#FF2196F3" FontWeight="Bold" VerticalAlignment="Bottom" FontSize="16" BorderBrush="#FF2196F3" Text="{Binding Custom.CustomModel.CustomTag}"/>
             </StackPanel>
-            <Button Content="Lezár" Width="100" Height="100" Margin="0 30 0 0"/>
+            <Button Content="Lezár" Width="100" Height="100" Margin="0 30 0 0" Command="{Binding Custom.SubmitCommand}"/>
         </StackPanel>
     </Grid>
 </UserControl>

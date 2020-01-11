@@ -20,9 +20,15 @@ namespace CustomNotes
             mContext.SaveChanges();
         }
 
-        public bool CheckIfTagExists(CustomTag tag)
+        public bool CheckIfTagExists(string tag)
         {
-            return mContext.CustomTag.Where(r => r.Tag == tag.Tag).Any();
+            return mContext.CustomTag.Where(r => r.Tag == tag).Any();
+        }
+
+        public void AddCustom(CustomTable customItem)
+        {
+            mContext.CustomTable.Add(customItem);
+            mContext.SaveChanges();
         }
     }
 }

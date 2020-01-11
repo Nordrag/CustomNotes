@@ -11,5 +11,6 @@ namespace CustomNotes
         public string Tag { get; set; } = "Emlékeztetőnek";
         public string Relevance { get; set; } = "Új";
         public string CustomTag { get; set; }
+        public DateTime Date { get; set; } = DateTime.Now;
     }
 }
