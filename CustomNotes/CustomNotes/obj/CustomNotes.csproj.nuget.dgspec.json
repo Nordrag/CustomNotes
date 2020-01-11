@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\WIN7\\Desktop\\CustomNotes\\CustomNotes\\CustomNotes\\CustomNotes\\CustomNotes.csproj": {}
+    "C:\\Users\\Asus-a320m\\Desktop\\Porgi stuff\\CustomNotes\\CustomNotes\\CustomNotes\\CustomNotes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\WIN7\\Desktop\\CustomNotes\\CustomNotes\\CustomNotes\\CustomNotes\\CustomNotes.csproj": {
+    "C:\\Users\\Asus-a320m\\Desktop\\Porgi stuff\\CustomNotes\\CustomNotes\\CustomNotes\\CustomNotes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WIN7\\Desktop\\CustomNotes\\CustomNotes\\CustomNotes\\CustomNotes\\CustomNotes.csproj",
+        "projectUniqueName": "C:\\Users\\Asus-a320m\\Desktop\\Porgi stuff\\CustomNotes\\CustomNotes\\CustomNotes\\CustomNotes.csproj",
         "projectName": "CustomNotes",
-        "projectPath": "C:\\Users\\WIN7\\Desktop\\CustomNotes\\CustomNotes\\CustomNotes\\CustomNotes\\CustomNotes.csproj",
-        "packagesPath": "C:\\Users\\WIN7\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WIN7\\Desktop\\CustomNotes\\CustomNotes\\CustomNotes\\CustomNotes\\obj\\",
+        "projectPath": "C:\\Users\\Asus-a320m\\Desktop\\Porgi stuff\\CustomNotes\\CustomNotes\\CustomNotes\\CustomNotes.csproj",
+        "packagesPath": "C:\\Users\\Asus-a320m\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus-a320m\\Desktop\\Porgi stuff\\CustomNotes\\CustomNotes\\CustomNotes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\WIN7\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Asus-a320m\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

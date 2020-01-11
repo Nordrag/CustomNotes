@@ -11,7 +11,7 @@ namespace CustomNotes
 
         public ApplicationDbContext()
         {
-            savePath = "C:/Users/WIN7/Desktop/CustomNotes/devdb.db3";
+            savePath = "C:/Users/Asus-a320m/Desktop/Porgi stuff/CustomNotes/devdb.db3";
             Database.EnsureCreated();
         }
 
